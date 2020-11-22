@@ -1,6 +1,26 @@
 ---
 layout: post
-title: You're up and running!
+title: 理解闭包
 ---
 
-Hello my dear friends.
+```JavaScript
+
+const outerValue = "Samurai";
+const later;
+
+function outerFunc() {
+  const innerValue = "ninja";
+  
+  function innerFunc() {
+    console.log(outerValue === "Samurai");
+    console.log(innerValue === "ninja");
+  }
+  
+  later = innerFunction;
+}
+
+outerFunction();
+
+later();
+
+```
